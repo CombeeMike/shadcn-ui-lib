@@ -1,6 +1,6 @@
 'use client';
 
-import { cn } from './../lib/css.utils';
+import { cn } from './../lib/css.utils.js';
 import * as SeparatorPrimitive from '@radix-ui/react-separator';
 import * as React from 'react';
 

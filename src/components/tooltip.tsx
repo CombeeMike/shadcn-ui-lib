@@ -1,6 +1,6 @@
 'use client';
 
-import { cn } from './../lib/css.utils';
+import { cn } from './../lib/css.utils.js';
 import * as TooltipPrimitive from '@radix-ui/react-tooltip';
 import * as React from 'react';
 
@@ -31,7 +31,7 @@ type TooltipProps = {
   children: React.ReactNode;
 };
 
-const Tooltip = ({ title, children }: TooltipProps): React.JSX.Element => (
+const Tooltip: React.FC<TooltipProps> = ({ title, children }) => (
   <TooltipProvider>
     <TooltipRoot>
       <TooltipTrigger asChild>{children}</TooltipTrigger>

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { cn } from '../lib/css.utils';
+import { cn } from '../lib/css.utils.js';
 
 type HeadingProps = React.HTMLAttributes<HTMLHeadingElement> & {
   variant: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
