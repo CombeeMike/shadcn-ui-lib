@@ -41,13 +41,13 @@ export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
     VariantProps<typeof buttonVariants> {
   asChild?: boolean;
-  href?: string;
+  link?: React.ReactElement;
   icon?: LucideIcon;
   isLoading?: boolean;
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant, size, asChild = false, icon, href, children, isLoading = false, disabled, ...props }, ref) => {
+  ({ className, variant, size, asChild = false, icon, link, children, isLoading = false, disabled, ...props }, ref) => {
     const iconCls = cn({
       'h-5 w-5': size === 'lg' || size === 'icon-lg' || size === 'default' || size === 'icon',
       'h-4 w-4': size === 'sm' || size === 'icon-sm',
@@ -81,7 +81,8 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       </>
     );
 
-    const Comp = asChild || !!href ? Slot : 'button';
+    const linkWithChildren = link && React.cloneElement(link, { children: content });
+    const Comp = asChild || !!linkWithChildren ? Slot : 'button';
     return (
       <Comp
         className={cn('flex gap-2', buttonVariants({ variant, size, className }))}
@@ -89,8 +90,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         disabled={disabled ?? isLoading}
         {...props}
       >
-        {/* TODO: How to inject the next/link here? */}
-        {href ? <a href={href}>{content}</a> : content}
+        {linkWithChildren ? linkWithChildren : content}
       </Comp>
     );
   }

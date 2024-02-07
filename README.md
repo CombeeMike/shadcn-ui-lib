@@ -1,6 +1,5 @@
 # ToDo
 
-- Allow usage of TS path alias `~`
 - Write `README.md` & `CHANGELOG.md`
 - Create git project
 - Do we need `components.json`?

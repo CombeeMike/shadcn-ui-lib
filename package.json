@@ -1,6 +1,6 @@
 {
   "name": "halumi-ui",
-  "version": "0.0.0-alpha25",
+  "version": "0.0.0-alpha34",
   "private": false,
   "description": "Halumi UI library built on top of ShadCn UI & tailwind",
   "sideEffects": false,

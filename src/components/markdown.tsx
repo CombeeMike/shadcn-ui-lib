@@ -1,15 +1,18 @@
-// import Link from 'next/link';
 import { Heading } from './heading.js';
 import * as React from 'react';
 import ReactMarkdown from 'react-markdown';
 import rehypeRaw from 'rehype-raw';
 import remarkGfm from 'remark-gfm';
+import type { UrlObject } from 'url';
+
+type Url = string | UrlObject;
 
 type MarkdownProps = {
   text: string;
+  linkComponent: React.ComponentType<{ href: Url; children: React.ReactNode }>;
 };
 
-export const Markdown: React.FC<MarkdownProps> = ({ text }) => {
+export const Markdown: React.FC<MarkdownProps> = ({ text, linkComponent }) => {
   return (
     <div data-cmptype="Markdown" className="leading-7">
       <ReactMarkdown
@@ -51,11 +54,16 @@ export const Markdown: React.FC<MarkdownProps> = ({ text }) => {
               {children}
             </code>
           ),
-          // a: ({ node, children, href, ref, ...props }) => (
-          //   <Link className="underline" href={href || ''} {...props} target="_blank">
-          //     {children}
-          //   </Link>
-          // ),
+          a: ({ node, children, href, ref, ...props }) => {
+            const link = React.createElement(linkComponent, {
+              className: 'underline',
+              target: '_blank',
+              href: href || '',
+              children,
+              ...props,
+            });
+            return link;
+          },
           table: ({ node, children, ...props }) => (
             <div className="overflow-x-auto">
               <table className="border" {...props}>
