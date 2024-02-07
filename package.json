@@ -1,0 +1,54 @@
+{
+  "name": "halumi-ui",
+  "description": "Halumi UI library built on top of ShadCn UI & tailwind",
+  "private": false,
+  "version": "0.0.0-alpha11",
+  "type": "module",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "dev:link": "npm link",
+    "dev:unlink": "npm rm --global halumi-ui",
+    "build": "tsc && vite build && npm run copy:files-to-dist",
+    "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "pack": "npm i && npm run build && npm pack --pack-destination=\"./versions\"",
+    "copy:files-to-dist": "copyfiles -f ./tailwind.config.ts ./src/index.css dist"
+  },
+  "dependencies": {
+    "@radix-ui/react-avatar": "^1.0.4",
+    "@radix-ui/react-dropdown-menu": "^2.0.6",
+    "@radix-ui/react-separator": "^1.0.3",
+    "@radix-ui/react-slot": "^1.0.2",
+    "@radix-ui/react-tooltip": "^1.0.7",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.0",
+    "lucide-react": "^0.323.0",
+    "tailwind-merge": "^2.2.1",
+    "tailwindcss-animate": "^1.0.7"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.16",
+    "@types/react": "^18.2.43",
+    "@types/react-dom": "^18.2.17",
+    "@typescript-eslint/eslint-plugin": "^6.14.0",
+    "@typescript-eslint/parser": "^6.14.0",
+    "@vitejs/plugin-react": "^4.2.1",
+    "autoprefixer": "^10.4.17",
+    "copyfiles": "^2.4.1",
+    "eslint": "^8.55.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.5",
+    "postcss": "^8.4.34",
+    "postcss-cli": "^11.0.0",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5.2.2",
+    "vite": "^5.0.8",
+    "vite-plugin-dts": "^3.7.2"
+  }
+}
