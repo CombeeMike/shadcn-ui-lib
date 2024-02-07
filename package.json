@@ -2,7 +2,7 @@
   "name": "halumi-ui",
   "description": "Halumi UI library built on top of ShadCn UI & tailwind",
   "private": false,
-  "version": "0.0.0-alpha11",
+  "version": "0.0.0-alpha18",
   "type": "module",
   "main": "dist/index.cjs",
   "module": "dist/index.js",
@@ -15,10 +15,11 @@
     "dev": "vite",
     "dev:link": "npm link",
     "dev:unlink": "npm rm --global halumi-ui",
-    "build": "tsc && vite build && npm run copy:files-to-dist",
+    "build": "tsc && vite build && npm run build:styles && npm run copy:files-to-dist",
+    "build:styles": "postcss ./src/index.css -o ./dist/styles.css && node ./build-scripts/inject-tw-directives",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "pack": "npm i && npm run build && npm pack --pack-destination=\"./versions\"",
-    "copy:files-to-dist": "copyfiles -f ./tailwind.config.ts ./src/index.css dist"
+    "copy:files-to-dist": "copyfiles -f ./tailwind.config.ts dist"
   },
   "dependencies": {
     "@radix-ui/react-avatar": "^1.0.4",

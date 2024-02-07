@@ -1,12 +1,9 @@
-// TODO: Somehow export the config from here as well to make it re-usable in consuming projects?
 import { type Config } from 'tailwindcss';
 
 export default {
   darkMode: ['class'],
-  content: ["./src/**/*.{js,ts,jsx,tsx}"],
-  safelist: [
-    'dark'
-  ],
+  content: ['./src/**/*.{js,ts,jsx,tsx}'],
+  safelist: ['dark'],
   theme: {
     container: {
       center: true,
@@ -16,12 +13,6 @@ export default {
       },
     },
     extend: {
-      fontFamily: {
-        // TODO: Provide/export the actual font from this lib as well?
-        sans: ['var(--font-roboto)'],
-        mono: 'Consolas',
-        // mono: ['var(--font-roboto-mono)'],
-      },
       colors: {
         'border': 'hsl(var(--border))',
         'input': 'hsl(var(--input))',
@@ -91,7 +82,7 @@ export default {
           from: { height: 'var(--radix-collapsible-content-height)' },
           to: { height: '0' },
         },
-        'entry-highlight': {
+        'item-highlight': {
           '0%': { background: 'transparent' },
           '50%': { background: 'hsl(var(--primary))' },
           '100%': { background: 'transparent' },
@@ -102,10 +93,7 @@ export default {
         'accordion-up': 'accordion-up 0.2s ease-out',
         'collapsible-down': 'collapsible-down 0.3s ease-out',
         'collapsible-up': 'collapsible-up 0.3s ease-out',
-        'entry-highlight': 'entry-highlight 1s linear 1',
-      },
-      gridTemplateColumns: {
-        'card-layout': 'repeat(auto-fill, minmax(312px, 1fr))',
+        'item-highlight': 'item-highlight 1s linear 1',
       },
     },
   },

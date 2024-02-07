@@ -1,12 +1,3 @@
-/*
-Default lucide icon size is 1em to inherit the font size from the surrounding text.
-This needs to be defined before all the tailwind stuff so that consumers can override it on every single icon.
-*/
-.lucide {
-  width: 1em;
-  height: 1em;
-}
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
