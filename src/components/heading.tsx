@@ -1,5 +1,5 @@
-import * as React from 'react';
 import { cn } from '../lib/css.utils.js';
+import * as React from 'react';
 
 type HeadingProps = React.HTMLAttributes<HTMLHeadingElement> & {
   variant: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
@@ -22,14 +22,14 @@ const Heading = React.forwardRef<HTMLHeadingElement, HeadingProps>(
       variant === 'h1'
         ? 'h1'
         : variant === 'h2'
-        ? 'h2'
-        : variant === 'h3'
-        ? 'h3'
-        : variant === 'h4'
-        ? 'h4'
-        : variant === 'h5'
-        ? 'h5'
-        : 'h6';
+          ? 'h2'
+          : variant === 'h3'
+            ? 'h3'
+            : variant === 'h4'
+              ? 'h4'
+              : variant === 'h5'
+                ? 'h5'
+                : 'h6';
 
     return (
       <Comp ref={ref} className={className} {...props}>

@@ -1,9 +1,9 @@
 // import Link from 'next/link';
+import { Heading } from './heading.js';
+import * as React from 'react';
 import ReactMarkdown from 'react-markdown';
 import rehypeRaw from 'rehype-raw';
 import remarkGfm from 'remark-gfm';
-import { Heading } from './heading.js';
-import * as React from 'react';
 
 type MarkdownProps = {
   text: string;

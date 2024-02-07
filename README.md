@@ -1,6 +1,5 @@
 # ToDo
 
-- Add prettier
 - Update tsconfig to match other projects
 - Do we need `components.json`?
 - Add/configure eslint properly
