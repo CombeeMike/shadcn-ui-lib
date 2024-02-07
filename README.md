@@ -9,7 +9,6 @@
 - Write `README.md` & `CHANGELOG.md`
 - Create Notion project page
 - Create git project
-- Somehow expose `lucide-react`, `tailwind` etc. to consumers without them having to install it
 
 # Things to mention in readme
 
