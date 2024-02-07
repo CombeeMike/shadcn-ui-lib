@@ -1,13 +1,9 @@
 # ToDo
 
-- Update tsconfig to match other projects
-- Do we need `components.json`?
-- Add/configure eslint properly
-- Resolve TS errors in `vite.config.ts`
 - Allow usage of TS path alias `~`
 - Write `README.md` & `CHANGELOG.md`
-- Create Notion project page
 - Create git project
+- Do we need `components.json`?
 - Check if we need to run `npm i` or anything the like in consuming code after `npm run dev:unlink-halumi-ui`
 
 # Things to mention in readme

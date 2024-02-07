@@ -28,6 +28,7 @@
   },
   "prettier": "@combeenation/prettier-config",
   "dependencies": {
+    "@combeenation/ts-config": "^1.0.0",
     "@radix-ui/react-avatar": "^1.0.4",
     "@radix-ui/react-dropdown-menu": "^2.0.6",
     "@radix-ui/react-separator": "^1.0.3",
@@ -42,6 +43,7 @@
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
+    "@combeenation/eslint-config": "^1.0.1",
     "@combeenation/prettier-config": "^1.0.0",
     "@types/node": "^20.11.16",
     "@types/react": "^18.2.43",

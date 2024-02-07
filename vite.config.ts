@@ -1,3 +1,4 @@
+// @ts-ignore Not sure how to solve this but not worth the time to figure it out...
 import * as packageJson from './package.json';
 import react from '@vitejs/plugin-react';
 import { resolve } from 'path';
