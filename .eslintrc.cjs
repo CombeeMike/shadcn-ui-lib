@@ -4,6 +4,5 @@ module.exports = {
   extends: ['@combeenation/eslint-config', 'plugin:react-hooks/recommended'],
   ignorePatterns: ['dist', '.eslintrc.cjs'],
   plugins: ['react-refresh'],
-  rules: {
-  },
+  rules: {},
 };

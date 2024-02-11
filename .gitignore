@@ -27,3 +27,4 @@ dist-ssr
 versions/*-alpha*
 versions/*-beta*
 versions/*-rc*
+versions/*.dev.tgz
