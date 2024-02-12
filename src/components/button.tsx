@@ -37,6 +37,7 @@ const buttonVariants = cva(
   }
 );
 
+// TODO: Add dedicated `tooltip` prop
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
     VariantProps<typeof buttonVariants> {

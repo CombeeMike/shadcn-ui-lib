@@ -9,3 +9,7 @@ export * from './components/dropdown-menu.js';
 export * from './components/tooltip.js';
 export * from './components/separator.js';
 export * from './components/markdown.js';
+export * from './components/label.js';
+export * from './components/form.js';
+export * from './components/simple-form-field.js';
+export * from './components/input.js';

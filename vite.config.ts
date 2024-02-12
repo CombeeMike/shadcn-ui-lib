@@ -23,8 +23,8 @@ export default defineConfig({
     },
     rollupOptions: {
       // Do not include the deps and peerDeps in the build.
-      // `preserveModules` makes the lib tree shakable (in combeination with `sideEffects: false` in `package.json`).
       external: [...Object.keys(packageJson.peerDependencies || {}), ...Object.keys(packageJson.dependencies)],
+      // `preserveModules` makes the lib tree shakable (in combination with `sideEffects: false` in `package.json`).
       output: { preserveModules: true, exports: 'named' },
     },
 
