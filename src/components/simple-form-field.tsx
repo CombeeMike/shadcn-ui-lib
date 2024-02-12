@@ -1,3 +1,5 @@
+'use client';
+
 import { FormControl, FormField, FormItem, FormLabel, FormMessage } from './form.js';
 import React from 'react';
 import type { ControllerProps, ControllerRenderProps, FieldPath, FieldValues, useForm } from 'react-hook-form';

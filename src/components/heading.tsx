@@ -17,24 +17,12 @@ const Heading = React.forwardRef<HTMLHeadingElement, HeadingProps>(
       variant === 'h6' && 'text-lg font-bold',
       classNameProp
     );
-
-    const Comp =
-      variant === 'h1'
-        ? 'h1'
-        : variant === 'h2'
-          ? 'h2'
-          : variant === 'h3'
-            ? 'h3'
-            : variant === 'h4'
-              ? 'h4'
-              : variant === 'h5'
-                ? 'h5'
-                : 'h6';
+    const Tag = variant;
 
     return (
-      <Comp ref={ref} className={className} {...props}>
+      <Tag ref={ref} className={className} {...props}>
         {children}
-      </Comp>
+      </Tag>
     );
   }
 );
