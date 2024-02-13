@@ -1,0 +1,15 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "npm",
+      "script": "dev:install-into-project",
+      "problemMatcher": [],
+      "label": "Install into project",
+      "detail": "Build a new local alpha version of the lib and install in consuming project",
+      "presentation": {
+        "showReuseMessage": false
+      }
+    }
+  ]
+}
