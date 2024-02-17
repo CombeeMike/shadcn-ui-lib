@@ -1,8 +1,8 @@
 {
-  "name": "halumi-ui",
-  "version": "0.0.0-alpha86",
+  "name": "shadcn-ui-lib",
+  "version": "0.0.0",
   "private": false,
-  "description": "Halumi UI library built on top of ShadCn UI & tailwind",
+  "description": "UI library built on top of ShadCn UI & tailwind",
   "sideEffects": false,
   "type": "module",
   "exports": {
@@ -20,28 +20,18 @@
     "build:styles": "postcss ./src/index.css -o ./dist/styles.css && node ./build-scripts/inject-tw-directives",
     "copy:files-to-dist": "copyfiles -f ./tailwind.config.ts dist",
     "dev": "vite",
-    "dev:install-into-project": "node ./build-scripts/set-new-alpha-version && npm run pack && node ./build-scripts/rename-current-pack-to-dev && node ./build-scripts/install-dev-pack-in-project",
-    "dev:link": "npm link",
-    "dev:unlink": "npm rm --global halumi-ui",
     "format": "prettier --write .",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "pack": "npm i && npm run build && npm pack --pack-destination=\"./versions\""
+    "pack": "npm i && npm run build && npm pack"
   },
   "prettier": "@combeenation/prettier-config",
   "dependencies": {
     "@combeenation/ts-config": "^1.0.0",
-    "@radix-ui/react-avatar": "^1.0.4",
-    "@radix-ui/react-dropdown-menu": "^2.0.6",
     "@radix-ui/react-label": "^2.0.2",
-    "@radix-ui/react-separator": "^1.0.3",
     "@radix-ui/react-slot": "^1.0.2",
-    "@radix-ui/react-tooltip": "^1.0.7",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
     "react-hook-form": "^7.50.1",
-    "react-markdown": "^9.0.1",
-    "rehype-raw": "^7.0.0",
-    "remark-gfm": "^4.0.0",
     "tailwind-merge": "^2.2.1",
     "tailwindcss-animate": "^1.0.7"
   },
